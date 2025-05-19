@@ -1,0 +1,19 @@
+.nav-bar{
+    width: 100%;
+    background-color: rgb(40, 40, 40);
+}
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu li{
+    list-style: none;
+    padding: 9px 20px;
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
