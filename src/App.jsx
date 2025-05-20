@@ -6,7 +6,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <div style={{marginTop: "20px"}}>
+      <div style={{ marginTop: "20px" }}>
         <AppRouter />
       </div>
     </>
