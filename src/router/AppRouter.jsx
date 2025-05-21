@@ -5,6 +5,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 import Users from "../pages/Users";
+import Profile from "../pages/Profile";
 
 const AppRouter = () => {
   return (
@@ -14,6 +15,7 @@ const AppRouter = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/users" element={<Users/>} />
+        <Route path="/profile/:name" element={<Profile />}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

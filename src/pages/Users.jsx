@@ -1,6 +1,7 @@
 import React from "react";
-import "./userCard.css"
-const users = [
+import "./userCard.css";
+import { Link } from "react-router-dom";
+export const users = [
   {
     id: 1,
     name: "Alice Johnson",
@@ -84,14 +85,21 @@ const users = [
 ];
 
 const Users = () => {
-  return <div className="container">
-        <div className="card-parent">
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-        </div>
-  </div>;
+  return (
+    <div className="container">
+      <div className="card-parent">
+        {users.map((user) => (
+          <div key={user.id} className="card">
+            <img src={user.profile} alt="" />
+            <h2>{user.name}</h2>
+            <Link to={`/profile/${user.username}`} className="view-btn">
+              View Profile
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Users;
