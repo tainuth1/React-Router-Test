@@ -1,0 +1,33 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.add-product-form{
+    width: 550px;
+    background-color: #d4d4d4;
+    padding: 15px;
+    border-radius: 5px;
+}
+h2{
+    text-align: center;
+}
+input, select{
+    width: 100%;
+    padding: 8px 18px;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(187, 187, 187);
+}
+.add-btn{
+    border: none;
+    font-size: 18px;
+    padding: 9px 20px;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}

@@ -6,6 +6,7 @@ import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 import Users from "../pages/Users";
 import Profile from "../pages/Profile";
+import AddProduct from "../components/products/AddProduct";
 
 const AppRouter = () => {
   return (
@@ -17,6 +18,8 @@ const AppRouter = () => {
         <Route path="/users" element={<Users/>} />
         <Route path="/profile/:name" element={<Profile />}/>
         <Route path="*" element={<NotFound />} />
+
+        <Route path="/add-product" element={<AddProduct />} />
       </Routes>
     </>
   );

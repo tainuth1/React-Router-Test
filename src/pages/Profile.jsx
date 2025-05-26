@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { users } from "./Users";
+    
 
 const Profile = () => {
   const [user, setUser] = useState({});
