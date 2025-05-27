@@ -7,6 +7,7 @@ import NotFound from "../pages/NotFound";
 import Users from "../pages/Users";
 import Profile from "../pages/Profile";
 import AddProduct from "../components/products/AddProduct";
+import ViewProduct from "../components/products/ViewProduct";
 
 const AppRouter = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter = () => {
         <Route path="*" element={<NotFound />} />
 
         <Route path="/add-product" element={<AddProduct />} />
+        <Route path="/view-product" element={<ViewProduct />} />
       </Routes>
     </>
   );
