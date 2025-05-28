@@ -20,6 +20,14 @@ const ViewProduct = () => {
     fetchProducts();
   }, []);
 
+  const deleteProduct = async (id) => {
+    const res = await fetch(`http://localhost:3000/products/${id}`, {
+      method: "DELETE",
+    });
+    setProducts(products.filter((pro)=> pro.id != id))
+    alert("Delete sucessfully.")
+  };
+
   return (
     <div className="container">
       <h1>View All Products</h1>
@@ -28,11 +36,17 @@ const ViewProduct = () => {
           <h2 style={{ textAlign: "center" }}>Empty Products</h2>
         ) : (
           products.map((pro) => (
-            <div className="pro-card">
+            <div key={pro.id} className="pro-card">
               <img src={pro.image} alt="" />
               <p>{pro.name}</p>
               <p>{pro.category}</p>
               <span>${pro.price}</span>
+              <button
+                onClick={() => deleteProduct(pro.id)}
+                className="delete-btn"
+              >
+                Delete
+              </button>
             </div>
           ))
         )}
